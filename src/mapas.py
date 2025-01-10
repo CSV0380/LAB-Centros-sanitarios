@@ -54,3 +54,8 @@ def guarda_mapa(mapa, ruta_fichero):
     mapa.save(ruta_fichero)
     # Abre el fichero creado en un navegador web
     webbrowser.open("file://" + os.path.realpath(ruta_fichero))
+
+
+if __name__ == '__main__':
+    mapa = crea_mapa(Coordenadas(40.4168, -3.7037))
+    guarda_mapa(mapa,"data")
